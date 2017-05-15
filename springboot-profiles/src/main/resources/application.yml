@@ -1,0 +1,64 @@
+#端口配置：
+#server: 
+#  tomcat: 
+#    uri-encoding: UTF-8  
+
+spring: 
+  profiles: 
+    active: dev
+
+#时间格式化
+#  jackson: 
+#     date-format: yyyy-MM-dd HH:mm:ss
+#  datasource:
+#    url: jdbc:mysql://192.168.50.202:3307/test?characterEncoding=UTF-8
+#    username: test1
+#    password: test1
+#    driver-class-name: com.mysql.jdbc.Driver
+#  jpa:
+#    database: MYSQL
+#    show-sql: true
+#    hibernate:
+#      ddl-auto: update
+#      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.MySQL5Dialect
+  
+# 开发环境
+---
+spring: 
+  profiles: dev
+  
+my: 
+  properties: 
+    abc: devdevdev
+#server: 
+#  port: 8090
+#  profiles: dev
+#  redis:
+#    host: dev.iwhere.com
+    
+# 测试环境配置
+---
+spring: 
+  profiles: qa
+
+my: 
+  properties: 
+    abc: qaqaqaqa
+#server: 
+#  port: 8000
+#  redis:
+#    host: qa.iwhere.com
+
+# 生产环境配置
+---
+spring: 
+  profiles: prod
+  
+my: 
+  properties: 
+    abc: prodpordpord
+#  redis: 
+#    url: jdbc:mysql://localhost:3306/
