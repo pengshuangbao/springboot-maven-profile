@@ -17,6 +17,4 @@ public class TestConfig {
 		this.abc = abc;
 	}
 	
-	
-	
 }

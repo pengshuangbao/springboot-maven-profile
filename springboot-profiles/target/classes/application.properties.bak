@@ -1,0 +1,4 @@
+spring.profiles.active=qa
+server.port=8080
+
+my.properties.abc=morenmoren

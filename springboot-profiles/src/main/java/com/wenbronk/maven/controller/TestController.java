@@ -1,5 +1,7 @@
 package com.wenbronk.maven.controller;
 
+import javax.annotation.Resource;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,27 +18,27 @@ import com.wenbronk.maven.config.TestConfig;
 @RestController
 public class TestController {
 
-	 @Autowired  
-	 private Environment env;
-	 
-	 @Autowired
-	 private TestConfig testConfig;
-	
+	@Autowired
+	private Environment env;
+
+	@Autowired
+	private TestConfig testConfig;
+
 	/**
 	 * 
 	 * @return
 	 * @time 2017年5月12日
 	 */
-	@RequestMapping(value="/test")
+	@RequestMapping(value = "/test")
 	public String test() {
 		System.out.println("connect success");
 		String property = env.getProperty("profile");
 		System.out.println("property   " + property);
-		
+
 		String abc = testConfig.getAbc();
 		System.out.println(abc);
-		
+
 		return "sucess";
 	}
-	
+
 }

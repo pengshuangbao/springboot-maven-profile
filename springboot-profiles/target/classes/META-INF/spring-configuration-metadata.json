@@ -1,0 +1,17 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.wenbronk.maven.config.TestConfig",
+      "name": "my.properties",
+      "type": "com.wenbronk.maven.config.TestConfig"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.wenbronk.maven.config.TestConfig",
+      "name": "my.properties.abc",
+      "type": "java.lang.String"
+    }
+  ]
+}
