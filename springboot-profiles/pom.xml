@@ -76,7 +76,16 @@
 	</dependencies>
 
 	<build>
-		<finalName>spring-boot-profiles</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<!-- 如果没有这个, 不生效 -->
+					<fork>true</fork>
+				</configuration>
+			</plugin>
+		</plugins>
 	</build>
 
 </project>

@@ -1,0 +1,5 @@
+com\wenbronk\profile\config\TestConfig.class
+com\wenbronk\profile\controller\TestController.class
+com\wenbronk\profile\resource\MyResourceLoader.class
+META-INF\spring-configuration-metadata.json
+com\wenbronk\profile\App.class

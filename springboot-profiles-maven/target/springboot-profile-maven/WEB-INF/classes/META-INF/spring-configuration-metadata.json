@@ -1,0 +1,17 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.wenbronk.profile.config.TestConfig",
+      "name": "my.properties",
+      "type": "com.wenbronk.profile.config.TestConfig"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.wenbronk.profile.config.TestConfig",
+      "name": "my.properties.abc",
+      "type": "java.lang.String"
+    }
+  ]
+}
