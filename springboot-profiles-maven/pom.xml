@@ -4,6 +4,8 @@
 	<groupId>com.wenbronk</groupId>
 	<artifactId>springboot-profiles-maven</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+
 	<parent>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<groupId>org.springframework.boot</groupId>
@@ -48,13 +50,13 @@
 			<groupId>com.fasterxml.jackson.dataformat</groupId>
 			<artifactId>jackson-dataformat-yaml</artifactId>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		
+
 		<!-- springboot 热部署 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -62,7 +64,7 @@
 			<optional>true</optional>
 			<scope>true</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-configuration-processor</artifactId>
@@ -101,7 +103,7 @@
 				<excludes>
 					<exclude>dev_conf/*</exclude>
 					<exclude>qa_conf/*</exclude>
-					
+
 <!-- 					<exclude>application-dev.properties</exclude> -->
 <!-- 					<exclude>application-qa.properties</exclude> -->
 <!-- 					<exclude>application-prod.properties</exclude> -->
@@ -111,15 +113,15 @@
 			</resource>
 			<resource>
 				<directory>src/main/resources/${profileActive}_conf</directory>
-				<includes>
-					<include>application-${profileActive}.properties</include>
-					<include>application.properties</include>
-				</includes>
-				<filtering>true</filtering>
+<!-- 				<includes> -->
+<!-- 					<include>application-${profileActive}.properties</include> -->
+<!--  					<include>application.properties</include> -->
+<!-- 				</includes> -->
+<!-- 				<filtering>true</filtering> -->
 			</resource>
-			
+
 		</resources>
-		
+
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
@@ -131,5 +133,6 @@
 			</plugin>
 		</plugins>
 	</build>
+
 
 </project>
